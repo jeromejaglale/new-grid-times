@@ -65,7 +65,7 @@ const SuperHeader = styled.div`
   background: var(--color-gray-900);
   color: white;
 
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     display: none;
   }
 
@@ -81,7 +81,7 @@ const ActionGroup = styled.div`
   gap: 24px;
 
 
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     displayf: none;
   }
 
@@ -97,9 +97,11 @@ const ActionGroup = styled.div`
 const ActionGroup2 = styled.div`
   display: revert;
   justify-self: right;
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     displayf: block;
   }
+  padding-top: 16px;
+  margin-bottom: -7px;
 
 `;
 
@@ -110,7 +112,7 @@ const MainHeader = styled(MaxWidthWrapper)`
   margin-top: 32px;
   margin-bottom: 48px;
 
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     display: none;
   }
 
@@ -124,9 +126,9 @@ const HeaderDesktop = styled(MaxWidthWrapper)`
 
   display: none;
 
-  @media ${QUERIES.desktopAndUp} {
+  @media ${QUERIES.laptopAndUp} {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
   }
 `;
 
