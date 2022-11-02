@@ -7,6 +7,8 @@ import {
   SECONDARY_STORIES,
 } from '../../data';
 
+import { QUERIES } from '../../constants';
+
 import SectionTitle from '../SectionTitle';
 import MainStory from '../MainStory';
 import SecondaryStory from '../SecondaryStory';
@@ -66,6 +68,12 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media ${QUERIES.tabletOnly} {
+    flex-direction: row;
+    gap: 32px;
+  }
+
 `;
 
 const OpinionSection = styled.section`
