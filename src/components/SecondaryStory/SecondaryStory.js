@@ -3,15 +3,32 @@ import styled from 'styled-components/macro';
 
 const SecondaryStory = ({ id, title, image, location, abstract }) => {
   return (
-    <a href={`/story/${id}`}>
+    <WrapperLink href={`/story/${id}`}>
       <Wrapper>
         <Image alt={image.alt} src={image.src} />
         <Heading>{title}</Heading>
         <Abstract>{abstract}</Abstract>
       </Wrapper>
-    </a>
+    </WrapperLink>
   );
 };
+
+const WrapperLink = styled.a`
+  padding-bottom: 16px;
+  padding-top: 16px;
+
+  border-bottom: 1px solid var(--color-gray-300);
+
+  &:first-child {
+    padding-top: 0px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0px;
+  }
+`;
+
 
 const Wrapper = styled.article`
   display: grid;
