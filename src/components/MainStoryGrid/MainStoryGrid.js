@@ -62,16 +62,20 @@ const Wrapper = styled.div`
       'main-story secondary-stories'
       'advertisement advertisement'
       'opinion-stories opinion-stories';
+      gap: 0px;
   }
 
 `;
 
 const MainStorySection = styled.section`
   grid-area: main-story;
+  padding-right: 15px;
+  border-right: 1px solid var(--color-gray-300);
 `;
 
 const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
+  padding-left: 16px;
 `;
 
 const StoryList = styled.div`
